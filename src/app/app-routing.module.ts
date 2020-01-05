@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HerosComponent } from './heros/heros.component';
-import { ActorsComponent } from './actors/actors.component';
 import { CompoundInterestCalculatorComponent } from './compound-interest-calculator/compound-interest-calculator.component';
 
 
