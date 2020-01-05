@@ -1,0 +1,55 @@
+<br>
+<div class="container">
+  <div class="jumbotron">
+  <h6>With Compounded Interest your portfolio worth will be: {{compounded}}</h6>
+  <h6>With Simple Interest your portfolio worth will be: {{simple}}</h6>
+  <h6>You will be making an extra of -> {{diff}} if compounded.</h6>
+  </div>
+  <form>
+    <div class="form-group row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">P </div>
+          </div>
+          <input [(ngModel)]="principal" (change)="calculate()" name="principal" type="number" class="form-control" placeholder="Principal Amount">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">r</div>
+          </div>
+          <input [(ngModel)]="rate" (change)="calculate()"  name="rate" type="number" class="form-control" placeholder="Compounding Rate">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">N</div>
+          </div>
+          <input [(ngModel)]="timesPerYear" (change)="calculate()"  name="times-per-year" type="number" class="form-control" placeholder="Compounds per year">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">t</div>
+          </div>
+          <input [(ngModel)]="totalTime" (change)="calculate()"  name="total-time" type="number" class="form-control" placeholder="Total time period">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<br>
